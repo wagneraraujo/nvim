@@ -9,6 +9,10 @@ return {
       window = {
         position = "right",
         width = 30,
+        mapping_options = {
+          noremap = true,
+          nowait = true,
+        },
       },
       git_status = {
         symbols = {
@@ -17,7 +21,6 @@ return {
           modified = "", -- or "", but this is redundant info if you use git_status_colors on the name
           deleted = "✖", -- this can only be used in the git_status source
           renamed = "󰁕", -- this can only be used in the git_status source
-          -- Status type
           untracked = "",
           ignored = "",
           unstaged = "󰄱",
