@@ -39,4 +39,15 @@ return {
       top_down = false,
     },
   },
+  {
+    "p00f/nvim-ts-rainbow",
+  },
+  {
+    "akinsho/git-conflict.nvim",
+    tag = "*",
+    config = function()
+      require("git-conflict").setup()
+    end,
+  },
+  { "jaredgorski/spacecamp" },
 }
