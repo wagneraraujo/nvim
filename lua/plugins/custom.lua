@@ -33,4 +33,10 @@ return {
   {
     "mg979/vim-visual-multi",
   },
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      top_down = false,
+    },
+  },
 }
