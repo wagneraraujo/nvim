@@ -157,6 +157,7 @@ return {
         "typescript",
         "vim",
         "yaml",
+        "java",
       },
     },
   },
@@ -191,6 +192,8 @@ return {
     opts = function()
       return {
         --[[add your custom lualine config here]]
+        icons_enabled = true,
+        theme = "gruvbox",
       }
     end,
   },
@@ -210,6 +213,8 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "tsserver",
+        "prettierd",
       },
     },
   },
