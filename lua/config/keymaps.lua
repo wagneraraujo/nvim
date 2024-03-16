@@ -17,8 +17,7 @@ local map = Util.safe_keymap_set
 -- ["<c-Right>"] = { "<cmd>BufferLineCycleNext<cr>", "Open file explorer", noremap = true },
 -- ["<leader>hp"] = { "<cmd>Gitsigns preview_hunk<cr>", "Preview Hunk", noremap = true },
 -- ["<leader>tb"] = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Blame Line", noremap = true },
-vim.keymap.set("n", "<leader>a", require("lspimport").import, { noremap = true })
-vim.keymap.set("n", "<c-Left>", "<cmd>BufferLineCyclePrev<cr>")
+-- vim.keymap.set("n", "<leader>a", require("lspimport").import, { noremap = true })
 map("n", "<c-Left>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 map("n", "<c-Right>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
