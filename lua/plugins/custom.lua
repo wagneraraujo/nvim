@@ -45,9 +45,25 @@ return {
   {
     "akinsho/git-conflict.nvim",
     tag = "*",
-    config = function()
-      require("git-conflict").setup()
-    end,
+    -- config = function()
+    --   require("git-conflict").setup()
+    -- end,
   },
   { "jaredgorski/spacecamp" },
+  {
+    "NvChad/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup({})
+    end,
+  },
+  "utilyre/barbecue.nvim",
+  name = "barbecue",
+  version = "*",
+  dependencies = {
+    "SmiteshP/nvim-navic",
+    "nvim-tree/nvim-web-devicons", -- optional dependency
+  },
+  opts = {
+    -- configurations go here
+  },
 }
