@@ -52,7 +52,6 @@ return {
   -- change some telescope options and a keymap to browse plugin files
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = "tsakirist/telescope-lazy.nvim",
     keys = {
       -- add a keymap to browse plugin files
       -- stylua: ignore
@@ -69,23 +68,6 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
-        file_ignore_patterns = { "node_modules" },
-      },
-      extensions = {
-        file_browser = {
-          theme = "dropdown",
-        },
-        fzf = {
-          fuzzy = true, -- false will only do exact matching
-          override_generic_sorter = true, -- override the generic sorter
-          override_file_sorter = true, -- override the file sorter
-          case_mode = "smart_case", -- or "ignore_case" or "respect_case"
-          -- the default case_mode is "smart_case"
-        },
-        mappings = {
-          i = { ["<c-t>"] = trouble.open_with_trouble },
-          n = { ["<c-t>"] = trouble.open_with_trouble },
-        },
       },
     },
   },
@@ -160,17 +142,6 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      rainbow = {
-        enable = true,
-        extended_mode = false,
-        max_file_lines = nil,
-      },
-      autopairs = { enable = true },
-      incremental_selection = { enable = true },
-
-      autotag = {
-        enable = true,
-      },
       ensure_installed = {
         "bash",
         "html",
@@ -187,7 +158,6 @@ return {
         "vim",
         "yaml",
         "java",
-        "typescriptreact",
       },
     },
   },
