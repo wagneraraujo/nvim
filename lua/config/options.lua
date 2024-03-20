@@ -8,7 +8,6 @@ if not vim.env.SSH_TTY then
   -- integration works automatically. Requires Neovim >= 0.10.0
   opt.clipboard = "unnamedplus" -- Sync with system clipboard
 end
-opt.clipboard = "unnamedplus"
 
 if vim.g.vscode then
   opt.cursorcolumn = false
