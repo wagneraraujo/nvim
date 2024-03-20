@@ -22,4 +22,7 @@ map("n", "<c-Left>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 map("n", "<c-Right>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 map("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
--- vim.keymap.set("n", "<leader>a", require("lspimport").import, { noremap = true })
+-- map("<C-y>", "<cmd>%y+<cr>", { desc = "Next buffer" })
+-- map("n", "<leader>ci", "<cmd>TypescriptAddMissingImports<cr>", { desc = "Import missing type" })
+vim.keymap.set("n", "<leader>y", '<cmd>"+y<cr>')
+--"<leader>ci", "<cmd>TypescriptAddMissingImports<cr>"
