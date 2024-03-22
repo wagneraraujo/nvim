@@ -13,6 +13,26 @@ return {
     end,
   },
   -- then: setup supertab in cmp
+  -- { "github/copilot.vim" },
+
+  {
+    "rmagatti/auto-session",
+    config = function()
+      require("auto-session").setup({
+        log_level = "error",
+        auto_session_suppress_dirs = { "~/", "~/projetos/", "~/grupow/", "/" },
+        auto_session_enable_last_session = true,
+        auto_session_root_dir = vim.fn.stdpath("data") .. "/sessions/",
+
+        session_lens = {
+          buftypes_to_ignore = {},
+          load_on_setup = true,
+          theme_conf = { border = true },
+          previewer = false,
+        },
+      })
+    end,
+  },
   {
     "hrsh7th/nvim-cmp",
     dependencies = {

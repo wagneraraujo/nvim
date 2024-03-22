@@ -56,14 +56,32 @@ return {
       require("colorizer").setup({})
     end,
   },
-  "utilyre/barbecue.nvim",
-  name = "barbecue",
-  version = "*",
-  dependencies = {
-    "SmiteshP/nvim-navic",
-    "nvim-tree/nvim-web-devicons", -- optional dependency
+  {
+    "utilyre/barbecue.nvim",
+    name = "barbecue",
+    version = "*",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons", -- optional dependency
+    },
+    opts = {
+      -- configurations go here
+    },
   },
-  opts = {
-    -- configurations go here
+  {
+    "chentoast/marks.nvim",
+    config = function()
+      require("marks").setup({
+        mappings = {
+          set_next = "m,",
+          next = "m<Down>",
+
+          preview = "m:",
+          set_bookmark0 = "<leader>md",
+          toggle = "<leader>mt",
+          prev = false, -- pass false to disable only this default mapping
+        },
+      })
+    end,
   },
 }

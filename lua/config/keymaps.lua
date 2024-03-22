@@ -26,3 +26,6 @@ map("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
 -- map("n", "<leader>ci", "<cmd>TypescriptAddMissingImports<cr>", { desc = "Import missing type" })
 vim.keymap.set("n", "<leader>y", '<cmd>"+y<cr>')
 --"<leader>ci", "<cmd>TypescriptAddMissingImports<cr>"
+vim.keymap.set("n", "<leader>ls", require("auto-session.session-lens").search_session, {
+  noremap = true,
+})
