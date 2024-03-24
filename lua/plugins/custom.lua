@@ -1,5 +1,11 @@
 return {
   {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "onedark",
+    },
+  },
+  {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       popup_border_style = "rounded",
@@ -54,6 +60,14 @@ return {
     "NvChad/nvim-colorizer.lua",
     config = function()
       require("colorizer").setup({})
+    end,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup()
     end,
   },
   {
