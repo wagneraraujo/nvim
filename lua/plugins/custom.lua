@@ -1,9 +1,9 @@
 return {
   {
     "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "onedark",
-    },
+    -- opts = {
+    --   colorscheme = "onedark",
+    -- },
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -47,13 +47,6 @@ return {
   },
   {
     "p00f/nvim-ts-rainbow",
-  },
-  {
-    "akinsho/git-conflict.nvim",
-    tag = "*",
-    -- config = function()
-    --   require("git-conflict").setup()
-    -- end,
   },
   { "jaredgorski/spacecamp" },
   {
