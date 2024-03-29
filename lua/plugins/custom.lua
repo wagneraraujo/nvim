@@ -4,6 +4,7 @@ return {
     -- opts = {
     --   colorscheme = "onedark",
     -- },
+    --
   },
   {
     "nvim-neo-tree/neo-tree.nvim",

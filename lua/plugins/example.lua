@@ -178,6 +178,9 @@ return {
         enable = true,
         extended_mode = false,
         max_file_lines = nil,
+        query = "rainbow-parens",
+
+        strategy = require("ts-rainbow").strategy.global,
       },
       autopairs = { enable = true },
       incremental_selection = { enable = true },
