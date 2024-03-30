@@ -45,4 +45,23 @@ return {
       -- require("onedark").load()
     end,
   },
+  { "rebelot/kanagawa.nvim", enabled = false, lazy = true, name = "kanagawa" },
+  { "sainnhe/gruvbox-material", enabled = false, lazy = true, name = "gruvbox-material" },
+  {
+    "sainnhe/everforest",
+    enabled = false,
+    lazy = true,
+    name = "everforest",
+    config = function()
+      vim.cmd.colorscheme("gruvbox-material")
+    end,
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+    enabled = false,
+    lazy = true,
+    config = function()
+      require("gruvbox").setup()
+    end,
+  },
 }
