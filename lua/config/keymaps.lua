@@ -29,3 +29,6 @@ vim.keymap.set("n", "<leader>y", '<cmd>"+y<cr>')
 vim.keymap.set("n", "<leader>ls", require("auto-session.session-lens").search_session, {
   noremap = true,
 })
+
+-- nnoremap <F5> :UndotreeToggle<CR>
+vim.keymap.set("n", "<F5>", "<cmd>:UndotreeToggle<cr>")
