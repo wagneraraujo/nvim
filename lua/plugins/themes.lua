@@ -64,4 +64,10 @@ return {
       require("gruvbox").setup()
     end,
   },
+  {
+    "liuchengxu/space-vim-dark", --space-vim-dark
+  },
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+  }, --oxocarbon
 }

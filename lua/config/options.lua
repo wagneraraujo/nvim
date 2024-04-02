@@ -31,3 +31,13 @@ else
   -- Title
   opt.title = true
 end
+
+opt.colorcolumn = "100"
+opt.signcolumn = "yes"
+opt.swapfile = false
+opt.backup = false
+opt.undofile = true
+-- folds
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldlevel = 99
