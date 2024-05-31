@@ -16,7 +16,7 @@ else
   opt.cursorcolumn = false -- Enable highlighting of the current column
   -- Rulers
   opt.ruler = true
-  opt.colorcolumn = "100"
+  opt.colorcolumn = "130"
 
   -- Folding
   opt.foldmethod = "expr"
@@ -37,7 +37,4 @@ opt.signcolumn = "yes"
 opt.swapfile = false
 opt.backup = false
 opt.undofile = true
--- folds
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
-opt.foldlevel = 99
+-- vim.go.background = "dark"

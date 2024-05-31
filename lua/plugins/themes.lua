@@ -1,73 +1,97 @@
 return {
   {
-    "navarasu/onedark.nvim",
-    config = function()
-      -- Lua
-      require("onedark").setup({
-        -- Main options --
-        style = "darker", -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-        transparent = false, -- Show/hide background
-        term_colors = true, -- Change terminal color as per the selected theme style
-        ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
-        cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
-
-        -- toggle theme style ---
-        toggle_style_key = nil, -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
-        toggle_style_list = { "dark", "darker", "cool", "deep", "warm", "warmer", "light" }, -- List of styles to toggle between
-
-        -- Change code style ---
-        -- Options are italic, bold, underline, none
-        -- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
-        code_style = {
-          comments = "italic",
-          keywords = "none",
-          functions = "none",
-          strings = "none",
-          variables = "none",
-        },
-
-        -- Lualine options --
-        lualine = {
-          transparent = false, -- lualine center bar transparency
-        },
-
-        -- Custom Highlights --
-        colors = {}, -- Override default colors
-        highlights = {}, -- Override highlight groups
-
-        -- Plugins Config --
-        diagnostics = {
-          darker = true, -- darker colors for diagnostic
-          undercurl = true, -- use undercurl instead of underline for diagnostics
-          background = true, -- use background color for virtual text
-        },
-      })
-      -- require("onedark").load()
-    end,
-  },
-  { "rebelot/kanagawa.nvim", enabled = false, lazy = true, name = "kanagawa" },
-  { "sainnhe/gruvbox-material", enabled = false, lazy = true, name = "gruvbox-material" },
-  {
-    "sainnhe/everforest",
-    enabled = false,
-    lazy = true,
-    name = "everforest",
-    config = function()
-      vim.cmd.colorscheme("gruvbox-material")
-    end,
-  },
-  {
     "ellisonleao/gruvbox.nvim",
-    enabled = false,
+    enabled = true,
     lazy = true,
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
     config = function()
-      require("gruvbox").setup()
+      require("gruvbox").setup({
+        terminal_colors = true, -- add neovim terminal colors
+        undercurl = true,
+        underline = true,
+        bold = true,
+        italic = {
+          strings = true,
+          emphasis = true,
+          comments = true,
+          operators = false,
+          folds = true,
+        },
+        strikethrough = true,
+        invert_selection = false,
+        invert_signs = false,
+        invert_tabline = false,
+        invert_intend_guides = false,
+        inverse = true, -- invert background for search, diffs, statuslines and errors
+        contrast = "", -- can be "hard", "soft" or empty string
+        palette_overrides = {},
+        overrides = {},
+        dim_inactive = false,
+        transparent_mode = false,
+      })
     end,
   },
   {
     "liuchengxu/space-vim-dark", --space-vim-dark
   },
+  { --github
+    "cormacrelf/vim-colors-github",
+  },
   {
-    "nyoom-engineering/oxocarbon.nvim",
-  }, --oxocarbon
+    "NLKNguyen/papercolor-theme",
+  },
+  {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
+    --     onedark
+    -- onelight
+    -- onedark_vivid
+    -- onedark_dark
+  },
+  { "Mofiqul/vscode.nvim", priority = 1000 },
+  { "Mofiqul/adwaita.nvim", priority = 1000 },
+  { "rmehri01/onenord.nvim", priority = 1000 },
+  { "arzg/vim-colors-xcode", priority = 1000 }, --xcodelight
+  {
+    "uloco/bluloco.nvim",
+    lazy = false,
+    priority = 1000,
+    dependencies = { "rktjmp/lush.nvim" },
+    --bluloco-light
+    config = function()
+      -- your optional config goes here, see below.
+      require("bluloco").setup({
+        style = "auto", -- "auto" | "dark" | "light"
+        transparent = false,
+        italics = false,
+        terminal = vim.fn.has("gui_running") == 1, -- bluoco colors are enabled in gui terminals per default.
+        guicursor = true,
+      })
+    end,
+  },
+  {
+    "oxfist/night-owl.nvim",
+    config = function()
+      require("night-owl").setup()
+    end,
+  },
+
+  {
+    "LazyVim/LazyVim",
+    config = true,
+    opts = {
+      colorscheme = "night-owl",
+      no_bold = true,
+      background = { -- :h background
+        light = "vscode",
+        dark = "adwaita",
+      },
+    },
+  },
 }

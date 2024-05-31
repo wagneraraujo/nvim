@@ -1,12 +1,5 @@
 return {
   {
-    "LazyVim/LazyVim",
-    -- opts = {
-    --   colorscheme = "onedark",
-    -- },
-    --
-  },
-  {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       popup_border_style = "rounded",
