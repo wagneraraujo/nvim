@@ -177,32 +177,8 @@ return {
             "typescript.tsx",
           },
           keys = {
-            {
-              "<leader>co",
-              function()
-                vim.lsp.buf.code_action({
-                  apply = true,
-                  context = {
-                    only = { "source.organizeImports.ts" },
-                    diagnostics = {},
-                  },
-                })
-              end,
-              desc = "Organize Imports",
-            },
-            {
-              "<leader>cR",
-              function()
-                vim.lsp.buf.code_action({
-                  apply = true,
-                  context = {
-                    only = { "source.removeUnused.ts" },
-                    diagnostics = {},
-                  },
-                })
-              end,
-              desc = "Remove Unused Imports",
-            },
+            { "<leader>co", "<cmd>TypescriptOrganizeImports<CR>", desc = "Organize Imports" },
+            { "<leader>cR", "<cmd>TypescriptRenameFile<CR>", desc = "Rename File" },
           },
           ---@diagnostic disable-next-line: missing-fields
           settings = {
@@ -314,6 +290,7 @@ return {
         "dockerfile",
         "gitignore",
         "query",
+        "cssls",
       },
     },
   },
@@ -378,6 +355,7 @@ return {
         "prettier",
         "eslint_d",
         "emmet_ls",
+        "cssls",
       },
     },
   },

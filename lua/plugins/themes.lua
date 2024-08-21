@@ -55,42 +55,16 @@ return {
     -- onedark_dark
   },
   { "Mofiqul/vscode.nvim", priority = 1000 },
-  { "Mofiqul/adwaita.nvim", priority = 1000 },
-  { "rmehri01/onenord.nvim", priority = 1000 },
-  { "arzg/vim-colors-xcode", priority = 1000 }, --xcodelight
-  {
-    "uloco/bluloco.nvim",
-    lazy = false,
-    priority = 1000,
-    dependencies = { "rktjmp/lush.nvim" },
-    --bluloco-light
-    config = function()
-      -- your optional config goes here, see below.
-      require("bluloco").setup({
-        style = "auto", -- "auto" | "dark" | "light"
-        transparent = false,
-        italics = false,
-        terminal = vim.fn.has("gui_running") == 1, -- bluoco colors are enabled in gui terminals per default.
-        guicursor = true,
-      })
-    end,
-  },
-  {
-    "oxfist/night-owl.nvim",
-    config = function()
-      require("night-owl").setup()
-    end,
-  },
 
   {
     "LazyVim/LazyVim",
     config = true,
     opts = {
-      colorscheme = "night-owl",
+      colorscheme = "catppuccin",
       no_bold = true,
       background = { -- :h background
         light = "vscode",
-        dark = "adwaita",
+        dark = "catppuccin",
       },
     },
   },

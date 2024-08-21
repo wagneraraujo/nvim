@@ -9,7 +9,6 @@ return {
           "onedark",
           "kanagawa",
           "gruvbox-material",
-          "everforest",
           "space-vim-dark",
           "space-vim-dark",
           "github",
