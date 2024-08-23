@@ -55,16 +55,26 @@ return {
     -- onedark_dark
   },
   { "Mofiqul/vscode.nvim", priority = 1000 },
-
+  {
+    "Yazeed1s/minimal.nvim",
+    priority = 1000,
+    lazy = false,
+  },
+  -- Lazy
+  {
+    "polirritmico/monokai-nightasty.nvim",
+    lazy = false,
+    priority = 1000,
+  },
   {
     "LazyVim/LazyVim",
     config = true,
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "minimal-base16",
       no_bold = true,
       background = { -- :h background
         light = "vscode",
-        dark = "catppuccin",
+        dark = "minimal-base16",
       },
     },
   },
