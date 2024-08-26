@@ -70,11 +70,11 @@ return {
     "LazyVim/LazyVim",
     config = true,
     opts = {
-      colorscheme = "minimal-base16",
+      colorscheme = "monokai-nightasty",
       no_bold = true,
       background = { -- :h background
         light = "vscode",
-        dark = "minimal-base16",
+        dark = "monokai-nightasty",
       },
     },
   },
