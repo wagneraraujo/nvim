@@ -67,15 +67,36 @@ return {
     priority = 1000,
   },
   {
-    "LazyVim/LazyVim",
-    config = true,
-    opts = {
-      colorscheme = "monokai-nightasty",
-      no_bold = true,
-      background = { -- :h background
-        light = "vscode",
-        dark = "monokai-nightasty",
-      },
-    },
+    "sontungexpt/witch",
+    priority = 1000,
+    lazy = false,
+    config = function(_, opts)
+      require("witch").setup(opts)
+    end,
   },
+  {
+    "ramojus/mellifluous.nvim",
+    -- version = "v0.*", -- uncomment for stable config (some features might be missed if/when v1 comes out)
+    config = function()
+      require("mellifluous").setup({
+        mellifluous = {
+          neutral = true, -- set this to false and bg_contrast to "medium" for original mellifluous (then it was called meliora theme)
+          bg_contrast = "medium", -- options: "soft", "medium", "hard"
+        },
+      }) -- optional, see configuration section.
+      vim.cmd("colorscheme mellifluous")
+    end,
+  },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   config = true,
+  --   opts = {
+  --     colorscheme = "mellifluous",
+  --     no_bold = true,
+  --     background = { -- :h background
+  --       light = "vscode",
+  --       dark = "mellifluous",
+  --     },
+  --   },
+  -- },
 }
