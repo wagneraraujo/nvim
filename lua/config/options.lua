@@ -38,3 +38,6 @@ opt.swapfile = false
 opt.backup = false
 opt.undofile = true
 -- vim.go.background = "dark"
+vim.opt.conceallevel = 0 -- mostra caracteres especiais
+vim.opt.scrolloff = 8 -- mantém 8 linhas visíveis ao fazer scroll
+vim.opt.sidescrolloff = 8
