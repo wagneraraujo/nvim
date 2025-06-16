@@ -30,5 +30,31 @@ vim.keymap.set("n", "<leader>ls", require("auto-session.session-lens").search_se
   noremap = true,
 })
 
+-- Adicione no seu arquivo de keymaps
+vim.keymap.set(
+  { "n", "v" },
+  "<Leader>cc",
+  "<cmd>CodeCompanionActions<cr>",
+  { noremap = true, silent = true, desc = "CodeCompanion Actions" }
+)
+vim.keymap.set(
+  { "n", "v" },
+  "<Leader>ce",
+  "<cmd>CodeCompanion<cr>",
+  { noremap = true, silent = true, desc = "CodeCompanion Chat" }
+)
+vim.keymap.set(
+  "v",
+  "<Leader>ca",
+  "<cmd>CodeCompanionAdd<cr>",
+  { noremap = true, silent = true, desc = "CodeCompanion Add" }
+)
+vim.keymap.set(
+  "n",
+  "<Leader>ct",
+  "<cmd>CodeCompanionToggle<cr>",
+  { noremap = true, silent = true, desc = "CodeCompanion Toggle" }
+)
+
 -- nnoremap <F5> :UndotreeToggle<CR>
 vim.keymap.set("n", "<F5>", "<cmd>:UndotreeToggle<cr>")
