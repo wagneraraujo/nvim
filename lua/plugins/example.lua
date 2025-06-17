@@ -304,6 +304,9 @@ return {
           "vim",
           "dockerfile",
           "gitignore",
+          "rust-analyzer",
+          "codelldb",
+          "taplo", -- TOML formatter
           -- "cssls",
         },
       },
