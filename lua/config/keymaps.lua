@@ -58,3 +58,18 @@ vim.keymap.set(
 
 -- nnoremap <F5> :UndotreeToggle<CR>
 vim.keymap.set("n", "<F5>", "<cmd>:UndotreeToggle<cr>")
+
+local function map(mode, lhs, rhs, opts)
+  opts = opts or {}
+  opts.silent = opts.silent ~= false
+  vim.keymap.set(mode, lhs, rhs, opts)
+end
+
+-- Rust específico
+map("n", "<leader>rr", ":RustRun<CR>", { desc = "Rust Run" })
+map("n", "<leader>rt", ":RustTest<CR>", { desc = "Rust Test" })
+map("n", "<leader>rd", ":RustDebuggables<CR>", { desc = "Rust Debuggables" })
+map("n", "<leader>rp", ":RustParentModule<CR>", { desc = "Rust Parent Module" })
+map("n", "<leader>rm", ":RustExpandMacro<CR>", { desc = "Rust Expand Macro" })
+map("n", "<leader>rc", ":RustOpenCargo<CR>", { desc = "Rust Open Cargo.toml" })
+map("n", "<leader>rg", ":RustViewCrateGraph<CR>", { desc = "Rust View Crate Graph" })
