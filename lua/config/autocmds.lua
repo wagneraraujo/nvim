@@ -16,3 +16,27 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   command = "LspRestart eslint",
   group = ts_grp,
 })
+
+-- Autocmds para Rust
+local augroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
+
+local rust_group = augroup("RustSettings", { clear = true })
+
+autocmd("FileType", {
+  pattern = "rust",
+  group = rust_group,
+  callback = function()
+    vim.opt_local.colorcolumn = "100"
+    vim.opt_local.textwidth = 100
+  end,
+})
+
+-- Auto-format on save
+autocmd("BufWritePre", {
+  pattern = "*.rs",
+  group = rust_group,
+  callback = function()
+    vim.lsp.buf.format({ async = false })
+  end,
+})
