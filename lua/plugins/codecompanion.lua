@@ -39,6 +39,9 @@ return {
                     "mistral:7b",
                   },
                 },
+                temperature = {
+                  default = 0.3,
+                },
               },
             })
           end,

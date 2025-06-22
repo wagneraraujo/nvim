@@ -74,19 +74,6 @@ return {
       require("witch").setup(opts)
     end,
   },
-  {
-    "ramojus/mellifluous.nvim",
-    -- version = "v0.*", -- uncomment for stable config (some features might be missed if/when v1 comes out)
-    config = function()
-      require("mellifluous").setup({
-        mellifluous = {
-          neutral = true, -- set this to false and bg_contrast to "medium" for original mellifluous (then it was called meliora theme)
-          bg_contrast = "medium", -- options: "soft", "medium", "hard"
-        },
-      }) -- optional, see configuration section.
-      vim.cmd("colorscheme mellifluous")
-    end,
-  },
   -- {
   --   "LazyVim/LazyVim",
   --   config = true,

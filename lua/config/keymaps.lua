@@ -73,3 +73,14 @@ map("n", "<leader>rp", ":RustParentModule<CR>", { desc = "Rust Parent Module" })
 map("n", "<leader>rm", ":RustExpandMacro<CR>", { desc = "Rust Expand Macro" })
 map("n", "<leader>rc", ":RustOpenCargo<CR>", { desc = "Rust Open Cargo.toml" })
 map("n", "<leader>rg", ":RustViewCrateGraph<CR>", { desc = "Rust View Crate Graph" })
+
+-- CodeCompanion
+vim.keymap.set({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+
+-- Menu principal de ações
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>cc",
+  "<cmd>CodeCompanionActions<cr>",
+  vim.tbl_extend("force", opts, { desc = "CodeCompanion Actions" })
+)
