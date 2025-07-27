@@ -22,7 +22,7 @@ return {
             adapter = "ollama",
           },
           agent = {
-            adapter = "gemini",
+            adapter = "ollama",
           },
         },
         adapters = {
